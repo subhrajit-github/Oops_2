@@ -1,4 +1,4 @@
-package Is_A;
+package com.Is_A;
 class A{
 	int i=10;
 }
