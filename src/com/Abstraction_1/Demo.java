@@ -1,4 +1,4 @@
-package com.Abstract;
+package com.Abstraction_1;
  abstract class X{
 	 abstract public void m1();
  }
