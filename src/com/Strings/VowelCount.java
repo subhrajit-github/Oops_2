@@ -7,7 +7,7 @@ public class VowelCount {
 		int count=0;
 		for(int i=0;i<s.length();i++) {
 			char ch=s.charAt(i);
-			//if(ch=='a'||ch=='i'||ch=='e'||ch=='o'||ch=='u')
+			//if(ch=='a'||ch=='i'||ch=='e'||ch=='o'||ch=='u')//It is correct
 				//count++;
 			if(ch=='a') count++;
 			if(ch=='i') count++;
