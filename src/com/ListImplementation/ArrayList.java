@@ -40,4 +40,13 @@ public class ArrayList {
     	}
     	a[--p]=null;
     }
+    public String toString() {
+    	if(size()==0) return "[]";
+    	String s="["+a[0];
+    	for(int i=1;i<size();i++) {
+    		s=s+","+a[i];
+    	}
+    	s=a+"]";
+    	return s;
+    }
 }
