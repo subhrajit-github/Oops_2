@@ -9,9 +9,14 @@ public class Test4 {
 		l.add(30);
 		l.add(40);
 		l.add(50);
-		for(int i=0;i<l.size();i++) {
-			System.out.println((Integer)l.get(i));
-		}
+		System.out.println(l);
+		l.add(3, 70);
+		l.add(4,60);
+		System.out.println(l);
+		l.remove(1);
+		System.out.println(l);
+		l.reverse();
+		System.out.println(l);
 	}
 
 }
