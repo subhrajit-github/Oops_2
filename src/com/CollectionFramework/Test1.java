@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Test1 {
      public static void main(String [] args) {
-    	 ArrayList l1=new ArrayList();
+    	 ArrayList<Integer> l1=new ArrayList<Integer>();
     	 l1.add(10);
     	 l1.add(20);
     	 l1.add(30);
@@ -12,7 +12,7 @@ public class Test1 {
     	 l1.add(50);
     	 System.out.println("l1 ="+l1);
     	 
-    	 ArrayList l2=new ArrayList();
+    	 ArrayList<Integer> l2=new ArrayList<Integer>();
     	 l2.add(30);
     	 l2.add(50);
     	 l2.add(60);
