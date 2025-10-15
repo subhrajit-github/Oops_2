@@ -1,5 +1,8 @@
 package com.BinarySearchTree;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class BST {
       Node root;
       int count=0;
@@ -54,5 +57,51 @@ public class BST {
     	  InOrder(n.left);
     	  System.out.println(n.key);
     	  InOrder(n.right);
+      }
+      public void LevelOrder() {
+    	  Queue<Node> q=new ArrayDeque<Node>();
+    	  q.add(root);
+    	  while(!q.isEmpty()) {
+    		  Node n=q.poll();
+    		  System.out.println(n.key+" ");
+    		  if(n.left!=null)
+    			  q.add(n.left);
+    		  if(n.right!=null)
+    			  q.add(n.right);
+    	  }
+      }
+      public void remove(int key) {
+    	  remove(key,root);
+      }
+      public Node remove(int key, Node n) {
+    	  if(n==null) 
+    		  return null;
+    	  if(key<n.key)
+    		  n.left=remove(key,n.left);
+    	  else if(key>n.key)
+    		  n.right=remove(key,n.right);
+    	  else {
+    		  if(n.left==null) {
+    			  count--;
+    			  return n.right;
+    		  }
+    		  else if(n.right==null) {
+    			  count--;
+    			  return n.left;
+    		  }
+    		  else {
+    			  n.key=minEle(n.right);
+    			  n.right=remove(n.key,n.right);
+    		  }
+    	  }
+    	  return n;
+      }
+      public int minEle(Node n) {
+    	  int min=n.key;
+    	  while(n.left!=null) {
+    		  min=n.left.key;
+    		  n=n.left;
+    	  }
+    	  return min;
       }
 }
