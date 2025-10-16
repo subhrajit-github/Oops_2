@@ -31,6 +31,16 @@ public class HashSet {
 			}
 		}
 	}
+	public boolean contains(Object key) {
+		int hc=Math.abs(key.hashCode());
+		int index=hc%a.length;//hash function
+		Node n=a[index];
+		while(n!=null) {
+			if(n.key.equals(key)) return true;
+			n=n.next;
+		}
+		return false;
+	}
 
 
 }
