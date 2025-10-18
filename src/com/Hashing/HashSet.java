@@ -41,6 +41,27 @@ public class HashSet {
 		}
 		return false;
 	}
+	public boolean remove(Object ele) {
+		int hc=Math.abs(ele.hashCode());
+		int index=hc%a.length;
+		Node prev=null;
+		Node curr=a[index];
+		while(curr!=null) {
+			if(curr.key.equals(ele)) {
+				if(prev==null) {
+					a[index]=a[index].next;
+					count--;
+					return true;
+				}
+				prev.next=prev.next.next;
+				count--;
+				return true;
+			}
+			prev=curr;
+			curr=curr.next;
+		}
+		return false;
+	}
 
 
 }
