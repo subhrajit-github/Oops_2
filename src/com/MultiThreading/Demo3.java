@@ -7,7 +7,7 @@ public class Demo3 {
 		for (int i = 0; i <= s.length()-1; i++) {
 			System.out.println(s.charAt(i));
 			try {
-				Thread.sleep(10);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
